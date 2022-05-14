@@ -23,7 +23,7 @@ const connects = [
     { id: 8, img: "https://i.ibb.co/crkQ0YC/collaborate-icon-7.png" },
     { id: 9, img: "https://i.ibb.co/LdKWkyQ/collaborate-icon-8.png" },
     { id: 10, img: "https://i.ibb.co/vB87T3s/collaborate-icon-9.png" },
-    { id: 10, img: "https://i.ibb.co/9bBr4RQ/collaborate-icon-10.png" },
+    { id: 11, img: "https://i.ibb.co/9bBr4RQ/collaborate-icon-10.png" },
 ]
 
 const Connects = () => {

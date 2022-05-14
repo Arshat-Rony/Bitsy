@@ -1,6 +1,11 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { Link } from 'react-router-dom';
 import img from "../../assests/Images/logo/bits-logo (1).png"
+import auth from '../firebaseinit';
 const Header = () => {
+    const [user] = useAuthState(auth)
     const menu = <>
         <li><a>Category</a></li>
         <li><a>Sell Type</a></li>
@@ -19,9 +24,9 @@ const Header = () => {
                             {menu}
                         </ul>
                     </div>
-                    <a class="btn btn-ghost normal-case text-xl">
+                    <Link to="/" class="btn btn-ghost normal-case text-xl">
                         <img width="50px" src={img} alt="" />
-                        Bitsy</a>
+                        Bitsy</Link>
                 </div>
                 <div class="navbar-center hidden lg:flex">
                     <ul class="menu menu-horizontal p-0">
@@ -30,8 +35,15 @@ const Header = () => {
                 </div>
                 <div class="navbar-end">
                     <ul className='menu menu-horizontal space-x-2'>
-                        <li><a className='btn btn-outline btn-accent'>Login</a></li>
-                        <li><a className='btn btn-accent'>Sign Up</a></li>
+                        <li><Link to="/login" className='btn btn-outline btn-accent'>Login</Link></li>
+                        {
+                            user ?
+                                <li><a onClick={() => signOut(auth)} className='btn btn-accent text-black'>Sign Out</a></li>
+
+                                :
+                                <li><Link to="/signup" className='btn btn-accent'>Sign Up</Link></li>
+                        }
+
                     </ul>
                 </div>
             </div>

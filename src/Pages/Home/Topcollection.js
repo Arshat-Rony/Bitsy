@@ -16,7 +16,7 @@ const Topcollection = ({ collection }) => {
                         <p>{stock} in Stock</p>
                     </div>
                     <div class="card-actions justify-end mt-8 mb-0">
-                        <button className="btn btn-primary w-full">Place a Bid</button>
+                        <button className="btn btn-primary w-full shadow-md shadow-pink-300 hover:bg-accent">Place a Bid</button>
                     </div>
                 </div>
             </div>

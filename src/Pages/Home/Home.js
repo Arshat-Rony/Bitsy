@@ -14,7 +14,6 @@ const Home = () => {
             <LiveBid></LiveBid>
             <Topcollections></Topcollections>
             <Connects></Connects>
-            <Footer></Footer>
         </div>
     );
 };
