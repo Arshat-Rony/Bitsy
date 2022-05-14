@@ -1,12 +1,20 @@
-# Getting Started with Create React App
+# Welcome to Bitsy
+(See Live Bitsy )[]
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Project Description
 
-In the project directory, you can run:
+_This project is made for NFT products Where user can bid after logged in. Project has a banner, Live Auction section, Exclusive product and top bid section._
 
-### `npm start`
+## Project Tools
+* ReactJs
+* Tailwind
+* FireBase
+* React Router Hooks
+* React Firebase Hooks
+
+## Author 
+__Arshat Rony__
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
