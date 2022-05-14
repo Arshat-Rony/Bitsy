@@ -1,7 +1,6 @@
 # Welcome to Bitsy
 
-
-(See Live Bitsy )[https://bits-cf981.firebaseapp.com/]
+[See Live Bitsy](https://bits-cf981.web.app)
 
 
 ## Project Description
