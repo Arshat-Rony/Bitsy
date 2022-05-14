@@ -7,32 +7,36 @@ import Login from './Pages/Shared/Login';
 import Footer from './Pages/Shared/Footer';
 import Signup from './Pages/Shared/Signup';
 import { ToastContainer } from 'react-toastify';
-import { useInView } from 'react-intersection-observer';
 import Loading from './Pages/Shared/Loading';
+import { useEffect, useState } from 'react';
 
 
 function App() {
-  const { ref, inView } = useInView();
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 4000);
+  }, [])
   return (
     <div className='bg-primary '>
-      <div ref={ref}></div>
       {
-        inView ?
-
-          <div>
-            <Header></Header>
-            <Routes>
-              <Route path='/' element={<Home></Home>}></Route>
-              <Route path='/home' element={<Home></Home>}></Route>
-              <Route path='/login' element={<Login></Login>}></Route>
-              <Route path='/signup' element={<Signup></Signup>}></Route>
-            </Routes>
-            <Footer></Footer>
-            <ToastContainer />
-          </div>
+        loading === false ? <>
+          <Header></Header>
+          <Routes>
+            <Route path='/' element={<Home></Home>}></Route>
+            <Route path='/home' element={<Home></Home>}></Route>
+            <Route path='/login' element={<Login></Login>}></Route>
+            <Route path='/signup' element={<Signup></Signup>}></Route>
+          </Routes>
+          <Footer></Footer>
+          <ToastContainer />
+        </>
           :
           <Loading type="spokes" color="#EB4B98"></Loading>
       }
+
     </div>
   );
 }
