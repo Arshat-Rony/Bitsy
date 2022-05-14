@@ -3,15 +3,16 @@ import Exclusives from '../Exclusives';
 import Banner from './Banner';
 import Connects from './Connects';
 import LiveBid from './LiveBid';
+import Topcollections from './Topcollections';
 
 const Home = () => {
     return (
         <div className='overflow-x-hidden'>
             <Banner></Banner>
-            <LiveBid></LiveBid>
             <Exclusives></Exclusives>
+            <LiveBid></LiveBid>
+            <Topcollections></Topcollections>
             <Connects></Connects>
-
         </div>
     );
 };

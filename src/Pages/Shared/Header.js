@@ -8,7 +8,7 @@ const Header = () => {
         <li><a>Blockchain</a></li>
     </>
     return (
-        <div className='sticky top-5 z-10'>
+        <div className='sticky top-0 z-10'>
             <div class="navbar bg-primary font-primary px-8 lg:px-20 ">
                 <div class="navbar-start">
                     <div class="dropdown">
