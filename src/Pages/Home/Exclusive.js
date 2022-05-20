@@ -10,24 +10,24 @@ const Exclusive = ({ product, children }) => {
     }
 
     return (
-        <div class="card bg-secondary shadow-md shadow-pink-400">
-            <figure class="px-10 pt-10">
-                <img src={thumbpicture} alt="Shoes" class="rounded-xl" />
+        <div className="card bg-secondary shadow-md shadow-pink-400">
+            <figure className="px-10 pt-10">
+                <img src={thumbpicture} alt="Shoes" className="rounded-xl" />
             </figure>
-            <div class="card-body ">
+            <div className="card-body ">
                 {children}
                 <div className='flex justify-between items-center w-full'>
                     <p className='text-sm'>Highest Bid at {price}</p>
-                    <button class="btn btn-primary flex items-center gap-4 justify-center relative left-8 rounded-none hover:bg-accent">
+                    <button className="btn btn-primary flex items-center gap-4 justify-center relative left-8 rounded-none hover:bg-accent">
                         <AiOutlineShoppingCart />
                         Buy Now</button>
                 </div>
-                <h2 class="text-start font-bold text-xl">{productName}</h2>
+                <h2 className="text-start font-bold text-xl">{productName}</h2>
                 <p className='text-sm'>By @{sellerName.split(" ").join("_")} </p>
-                <div class="card-actions flex items-center justify-between w-full">
+                <div className="card-actions flex items-center justify-between w-full">
 
                     <p className='flex items-center'>
-                        <span class="bg-accent p-2 rounded-full mr-1"><FaEthereum /> </span>
+                        <span className="bg-accent p-2 rounded-full mr-1"><FaEthereum /> </span>
                         {ethar.slice(1, ethar[ethar.length])} ETH</p>
                     <button onClick={() => {
 

@@ -3,7 +3,7 @@ import useProducts from '../hooks/useProducts';
 import Exclusive from './Home/Exclusive';
 
 const Exclusives = () => {
-    const url = 'products.json'
+    const url = 'http://localhost:5000/products'
     const { data } = useProducts(url)
     const menu = <>
         <li className='btn btn-secondary btn-sm rounded-none hover:bg-accent'>Auction</li>
@@ -21,7 +21,7 @@ const Exclusives = () => {
             <div className="exclusive grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-5">
                 {
                     data.slice(0, 8).map(product => <Exclusive
-                        key={product.id}
+                        key={product._id}
                         product={product}
                     ></Exclusive>)
                 }

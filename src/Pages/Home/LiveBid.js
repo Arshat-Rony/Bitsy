@@ -4,7 +4,7 @@ import Timer from '../Shared/Timer';
 import Exclusive from './Exclusive';
 
 const LiveBid = () => {
-    const url = 'products.json'
+    const url = 'http://localhost:5000/products'
     const { data } = useProducts(url)
     const time = new Date();
     time.setSeconds(time.getSeconds() + 600);
@@ -16,7 +16,7 @@ const LiveBid = () => {
                 {
                     data.slice(8, 13).map(product =>
                         <Exclusive
-                            key={product.id}
+                            key={product._id}
                             product={product}
                         >
                             <Timer expiryTimestamp={time}></Timer>

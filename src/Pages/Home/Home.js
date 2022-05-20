@@ -1,6 +1,5 @@
 import React from 'react';
 import Exclusives from '../Exclusives';
-import Footer from '../Shared/Footer';
 import Banner from './Banner';
 import Connects from './Connects';
 import LiveBid from './LiveBid';
