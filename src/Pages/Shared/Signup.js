@@ -12,7 +12,6 @@ const Signup = () => {
     const navigate = useNavigate()
     const location = useLocation()
     const from = location.state?.from?.pathname || '/'
-    const name = useRef(null)
     const { register, formState: { errors }, handleSubmit } = useForm();
     const [updateProfile, updating] = useUpdateProfile(auth);
 

@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import useProducts from '../hooks/useProducts';
 import Exclusive from './Home/Exclusive';
+import BiiddingModal from './Shared/BiiddingModal';
 
 const Exclusives = () => {
+    const [bid, setBid] = useState(null)
     const url = 'http://localhost:5000/products'
     const { data } = useProducts(url)
     const menu = <>
@@ -23,10 +25,16 @@ const Exclusives = () => {
                     data.slice(0, 8).map(product => <Exclusive
                         key={product._id}
                         product={product}
+                        setBid={setBid}
                     ></Exclusive>)
                 }
             </div>
-
+            {
+                bid && <BiiddingModal
+                    setBid={setBid}
+                    bid={bid}
+                ></BiiddingModal>
+            }
         </div>
     );
 };

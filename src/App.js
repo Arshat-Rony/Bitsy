@@ -17,6 +17,7 @@ import AddedItmes from './Pages/Dashboard/AddedItmes';
 import Earnings from './Pages/Dashboard/Earnings';
 import Users from './Pages/Users';
 import RequireAdmin from './Pages/RequireAdmin';
+import Payment from './Pages/Payment';
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
             <Route path='/login' element={<Login></Login>}></Route>
             <Route path='/signup' element={<Signup></Signup>}></Route>
             <Route path='/sellers' element={<Sellers></Sellers>}></Route>
+            <Route path='/payment/:id' element={<Payment></Payment>}></Route>
             <Route path='dashboard' element={<RequireAuth><DashBoard></DashBoard>
             </RequireAuth>}>
               <Route index element={<AddedItmes />} />

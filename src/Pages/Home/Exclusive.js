@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 import { BsSuitHeart } from 'react-icons/bs'
 import { FaEthereum } from "react-icons/fa"
-const Exclusive = ({ product, children }) => {
+const Exclusive = ({ product, children, setBid }) => {
     const { productName, thumbpicture, ethar, sellerName, price } = product;
     let [count, setCount] = useState(0)
     if (count > 1) {
@@ -18,9 +18,10 @@ const Exclusive = ({ product, children }) => {
                 {children}
                 <div className='flex justify-between items-center w-full'>
                     <p className='text-sm'>Highest Bid at {price}</p>
-                    <button className="btn btn-primary flex items-center gap-4 justify-center relative left-8 rounded-none hover:bg-accent">
+                    <label onClick={() => setBid(product)} for="bidding-modal" className="btn btn-primary flex items-center gap-4 justify-center relative left-8 rounded-none hover:bg-accent">
                         <AiOutlineShoppingCart />
-                        Buy Now</button>
+                        Buy Now
+                    </label>
                 </div>
                 <h2 className="text-start font-bold text-xl">{productName}</h2>
                 <p className='text-sm'>By @{sellerName.split(" ").join("_")} </p>
@@ -28,7 +29,9 @@ const Exclusive = ({ product, children }) => {
 
                     <p className='flex items-center'>
                         <span className="bg-accent p-2 rounded-full mr-1"><FaEthereum /> </span>
-                        {ethar.slice(1, ethar[ethar.length])} ETH</p>
+                        {/* {ethar.slice(1, ethar[ethar.length])} */}
+                        {ethar}
+                        ETH</p>
                     <button onClick={() => {
 
                         setCount(count + 1)
